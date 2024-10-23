@@ -2,7 +2,7 @@ import streamlit as st, datetime
 import streamlit_authenticator as sta
 import yaml
 from yaml.loader import SafeLoader
-with open('CSC/pass.yaml') as file:
+with open('pass.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
 
 watering_days = {
@@ -42,7 +42,7 @@ def flip(day):
 st.title("Student Center Hydroponics System")
 col1,col2,col3 = st.columns(3)
 with col1:
-    st.image("CSC/images.jpg")
+    st.image("images.jpg")
     st.header("Watering Days:")
     st.text(watering_days_text)
 with col2:
